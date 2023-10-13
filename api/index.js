@@ -21,8 +21,8 @@ app.use(express.json());
 
 app.listen(3000, () => console.log("The app is listening on port: 3000"));
 
-app.use("/api", userRouter);
-app.use("/api", authRouter);
+app.use("/api/user", userRouter);
+app.use("/api/auth", authRouter);
 
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
